@@ -75,7 +75,7 @@ set autoread
 " Theme
 
 set t_Co=256
-color wombat256mod
+color vividchalk
 set colorcolumn=100
 
 augroup vimrcEx
