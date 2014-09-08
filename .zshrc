@@ -1,4 +1,3 @@
-automatic options added
 setopt appendhistory autocd nomatch autopushd pushdignoredups promptsubst
 unsetopt beep
 bindkey -e
