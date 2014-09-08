@@ -1,6 +1,6 @@
 autocmd!
 
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 " Basic Settings
 
@@ -16,6 +16,7 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
+set number
 " make searches case-sensitive
 set ignorecase smartcase
 " highlight current line
