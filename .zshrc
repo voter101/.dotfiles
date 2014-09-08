@@ -2,7 +2,14 @@ automatic options added
 setopt appendhistory autocd nomatch autopushd pushdignoredups promptsubst
 unsetopt beep
 bindkey -e
-PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
+
+# Disable ^S and ^Q for terminal
+unsetopt flowcontrol
+
+# Better history
+export HISTSIZE=100000
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
 
 autoload -U promptinit
 promptinit
