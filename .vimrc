@@ -173,3 +173,6 @@ augroup VimCSS3Syntax
 
     autocmd FileType css setlocal iskeyword+=-
 augroup END
+
+" Coffeescript 2 space indent
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
