@@ -25,8 +25,6 @@ set cmdheight=1
 set switchbuf=useopen
 set showtabline=2
 set winwidth=79
-" This makes RVM work inside Vim. I have no idea why.
-set shell=bash
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
@@ -176,3 +174,9 @@ augroup END
 
 " Coffeescript 2 space indent
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
+" NerdTree toggle
+map <F12> :NERDTreeToggle<CR>
+"
+" Close vim if NerdTree is only left window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
