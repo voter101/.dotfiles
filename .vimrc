@@ -16,7 +16,7 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
-set number
+set ruler
 " make searches case-sensitive
 set ignorecase smartcase
 " highlight current line
