@@ -17,6 +17,8 @@ set showmatch
 set incsearch
 set hlsearch
 set ruler
+" mouse support
+set mouse=a
 " make searches case-sensitive
 set ignorecase smartcase
 " highlight current line
