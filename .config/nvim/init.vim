@@ -83,14 +83,17 @@ cnoremap <expr> %% expand('%:h').'/'
 map <C-n> :NERDTreeToggle<CR>
 
 """ VIM-ALE config
-let g:ale_linters = {'javascript': [], 'typescript': ['tsserver', 'eslint'], 'typescript.tsx': ['tsserver', 'eslint']}
-let g:ale_fixers = {'javascript': [], 'typescript': ['prettier'], 'typescript.tsx': ['prettier']}
+let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['tsserver', 'eslint'], 'typescript.tsx': ['tsserver', 'eslint']}
+let g:ale_fixers = {'javascript': ['prettier'], 'typescript': ['prettier'], 'typescript.tsx': ['prettier'], 'json': ['prettier']}
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_delay = 0
 let g:ale_set_quickfix = 0
 let g:ale_set_loclist = 0
 let g:ale_javascript_eslint_executable = 'eslint --cache'
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+
 " Vim-ale handles TypeScript quickfix, so tell Tsuquyomi not to do it.
 let g:tsuquyomi_disable_quickfix = 1
 
