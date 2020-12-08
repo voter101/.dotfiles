@@ -30,6 +30,7 @@ call plug#end()
 
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
+set number
 set history=10000
 set expandtab
 set tabstop=2
@@ -97,6 +98,7 @@ let g:tsuquyomi_disable_quickfix = 1
 let g:NERDTreeWinPos = "right"
 " Close vim if NERDTree is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 """ Ctrl-p config
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']

@@ -98,8 +98,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export SSH_AUTH_SOCK=$(gpgconf --list-dir agent-ssh-socket)
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH"
 export PATH="~/.nodenv/shims:~/.nodenv/bin:$PATH"
 export PATH="$(yarn global bin):$PATH"
