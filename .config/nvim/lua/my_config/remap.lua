@@ -25,3 +25,5 @@ vim.keymap.set("n", "Q", "<nop>")
 -- Relace selected word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Close all other splits
+vim.keymap.set("n", "<leader>o", ":only")
