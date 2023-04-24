@@ -16,8 +16,10 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set('n', 'Y', 'yy') -- Yank whole line like with "D" and "C"
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set('i', 'jj', '<ESC>')
 
 -- Disable functionality
 vim.keymap.set("n", "Q", "<nop>")
@@ -27,3 +29,14 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Close all other splits
 vim.keymap.set("n", "<leader>o", ":only")
+
+-- Navigate splits
+vim.keymap.set('', '<C-j>', '<C-W>j')
+vim.keymap.set('', '<C-k>', '<C-W>k')
+vim.keymap.set('', '<C-h>', '<C-W>h')
+vim.keymap.set('', '<C-l>', '<C-W>l')
+
+-- Tabs
+vim.keymap.set('n', '<C-t>', ':tabnew<CR>')
+vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
+vim.keymap.set('n', '<leader>w', ':tabclose<CR>')

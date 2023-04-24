@@ -6,6 +6,7 @@ lsp.ensure_installed({
     'tsserver', 
     'eslint',
     'rust_analyzer',
+    'solargraph',
 })
 
 local cmp = require('cmp')
@@ -33,6 +34,7 @@ lsp.set_preferences({
 
 lsp.format_on_save({
     servers = {
+        ['null-ls'] = {'ruby', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'},
         ['rust_analyzer'] = {'rust'},
     }
 })
@@ -57,3 +59,4 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
